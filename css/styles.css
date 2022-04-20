@@ -6,6 +6,7 @@ body {
     font-family: 'Mulish', sans-serif;
     background: var(--bg-color);
     overflow-x: hidden;
+    transition: .4s ease all;
 }
 
 
@@ -318,6 +319,7 @@ button {
     width: 100%;
     height: 50px;
     background: var(--blue-color);
+    transition: .4s ease all;
 }
 
 .nav-right .btn-nav-right button {
@@ -333,6 +335,7 @@ button {
 .nav-right .content-nav-right {
     width: 200px;
     height: 100vh;
+    transition: .4s ease all;
 
     display: flex;
     align-items: center;
@@ -385,6 +388,7 @@ button {
     border-radius: 10px 10px 0 0;
     position: absolute;
     bottom: 0px;
+    transition: .4s ease all;
 
     display: flex;
     justify-content: start;
@@ -455,6 +459,7 @@ button {
     height: 100vh;
     background: #FFF;
     position: relative;
+    transition: .4s ease all;
 }
 
 .poster {
@@ -464,6 +469,7 @@ button {
                  url(../img/mountains-mobile.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
+    transition: .4s ease all;
 
     display: flex;
     justify-content: center;
@@ -559,6 +565,7 @@ a {
 
    .about {
        margin: 0 10px 10px 10px;
+       transition: .4s ease all;
    }
 
    .about .about-content {
@@ -641,6 +648,7 @@ a {
 .skill {
     margin: 10px 10px;
     background: #fff;
+    transition: .4s ease all;
 }
 
 #skill {
@@ -742,6 +750,7 @@ p.skill-tech {
     background: rgb(246, 247, 249);
     overflow: hidden;
     border-radius: 10px;
+    transition: .4s ease all;
 }
 
 .skill-bars .skill-bar-size::after {
@@ -835,6 +844,7 @@ p.skill-tech {
     padding-bottom: 60px;
     margin: 10px 10px;
     background: #fff;
+    transition: .4s ease all;
 
     display: flex;
     flex-direction: column;
@@ -948,6 +958,7 @@ p.skill-tech {
     margin: 10px 10px;
     background: #fff;
     position: relative;
+    transition: .4s ease all;
 
     display: flex;
     flex-direction: column;
@@ -1206,6 +1217,60 @@ body.dark-mode .css3:after {
     background: linear-gradient(transparent 50%, var(--bg-dark2) 50%);
 }
 
+body.dark-mode .skill-bars .skill-bar-size,
+body.dark-mode .skill-bars .skill-bar-size::after {
+    position: relative;
+    background: rgb(135, 132, 137);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: .4s ease all;
+}
+body.dark-mode .skill-bars .skill-bar-size::after {
+    content: "";
+    position: absolute;
+    background: var(--blue-color);
+    transition: all .4s ease;
+    left: -300px;
+    animation: skill-bar-fill 2s ease-in-out forwards;
+}
+
+body.dark-mode .skill-bars .skill-level-10::after {
+    --skill-bar-level: 10%
+}
+body.dark-mode .skill-bars .skill-level-20::after {
+    --skill-bar-level: 20%
+}
+body.dark-mode .skill-bars .skill-level-30::after {
+    --skill-bar-level: 30%
+}
+body.dark-mode .skill-bars .skill-level-40::after {
+    --skill-bar-level: 50%
+}
+body.dark-mode .skill-bars .skill-level-50::after {
+    --skill-bar-level: 70%
+}
+body.dark-mode .skill-bars .skill-level-50::after {
+    --skill-bar-level: 70%
+}
+body.dark-mode .skill-bars .skill-level-60::after {
+    --skill-bar-level: 60%
+}
+body.dark-mode .skill-bars .skill-level-70::after {
+    --skill-bar-level: 70%
+}
+body.dark-mode .skill-bars .skill-level-80::after {
+    --skill-bar-level: 80%
+}
+body.dark-mode .skill-bars .skill-level-90::after {
+    --skill-bar-level: 90%
+}
+
+@keyframes skill-bar-fill {
+    to {
+        transform: translateX(var(--skill-bar-level));
+    }
+}
+
 
 body.dark-mode .skill-contain,
 body.dark-mode .framework {
@@ -1232,4 +1297,62 @@ body.dark-mode .about-content h1 {
 body.dark-mode .about-content p,
 body.dark-mode .about-content h4 {
     color: var(--font-color);
+}
+
+body.dark-mode .poster,
+body.dark-mode {
+    background: var(--bg-dark2);
+}
+
+body.dark-mode .skill h1 {
+    color: #fff;
+}
+
+body.dark-mode .skill,
+body.dark-mode .portfolio-container,
+body.dark-mode .form-container {
+    background: var(--bg-dark);
+    transition: .4s ease all;
+}
+
+body.dark-mode .portfolio-container h1 {
+    color: #fff;
+    transition: .4s ease all;
+}
+
+body.dark-mode #skill .skill-contain {
+    background: var(--bg-dark);
+    transition: .4s ease all;
+
+}
+
+body.dark-mode #skill .skill-contain .skill-bars{
+    background: rgba( 0, 0, 0, 0.8 );
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 5px );
+    transition: .4s ease all;
+}
+
+body.dark-mode #skill .skill-contain p {
+    color: #fff;
+    transition: .4s ease all;
+}
+
+body.dark-mode .form {
+    background: rgba( 0, 0, 0, 0.8 );
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 5px );
+    transition: .4s ease all;
+    color: #fff;
+}
+
+body.dark-mode .btn-nav-right,
+body.dark-mode div.dark-mode {
+    background: var(--bg-dark);
+    transition: .4s ease all;
+}
+
+body.dark-mode .content-nav-right {
+    background: var(--bg-dark2);
+    transition: .4s ease all;
 }

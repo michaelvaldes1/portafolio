@@ -10,7 +10,6 @@ let dark = document.querySelector('.slider');
 
 
 
-
 doti.addEventListener('click', function(){
     document.querySelector('header').classList.toggle('header-active');
 });
