@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/styles.css">
 
     <title>Michael</title>
@@ -96,9 +98,9 @@
     
             </div>
             <div class="social-net">
-                <a href="https://twitter.com/maicolvaldes06"><i class="bi bi-twitter" target="blank"></i></a>
-                <a href="https://www.instagram.com/maicolvaldes/" target="blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://github.com/michaelvaldes1"><i class="bi bi-github" target="blank"></i></a>
+                <a href="https://twitter.com/valdesmichael" target="blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.instagram.com/valdesmichael_/" target="blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/michaelvaldes1" target="blank"><i class="bi bi-github"></i></a>
                 <a href="https://www.linkedin.com/in/michaelvaldes-/" target="blank"><i class="bi bi-linkedin"></i></a>
             </div>
         </header>
@@ -115,8 +117,8 @@
                         <li><a href="#poster" onclick="closeNav()">Home</a></li>
                         <li><a href="#about" onclick="closeNav()">About</a></li>
                         <li><a href="#skill" onclick="closeNav()">Skill</a></li>
-                        <li><a href="#" onclick="closeNav()">Portfolio</a></li>
-                        <li><a href="#" onclick="closeNav()">Contact</a></li>
+                        <li><a href="#portfolio" onclick="closeNav()">Portfolio</a></li>
+                        <li><a href="#contact" onclick="closeNav()">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -129,7 +131,9 @@
         </nav>
 
         <div id="poster" class="poster" onclick="closeNav()">
-            <div class="poster-contain">
+            <div class="poster-contain"  data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
                 <p class="titulo">Hello friend, I'm <br> <span class="typed"></span></p>
                 <div class="btn-poster">
                     <button> <a href="#about">ABOUT ME</a></button>
@@ -139,56 +143,70 @@
 
 
         <div id="about" class="about" onclick="closeNav()">
+            <h1 data-aos="zoom-in">About Me</h1>
             <div class="about-content">
-                <h1>About Me</h1>
-                <h4>I'm Freelancer Front-end Developer with over 1 year of experience</h4>
-                <p>I'm Freelancer Front-end Developer with over 1 year of experience. I'm frome Panama.I code and
+                <h4 data-aos="fade-right">I'm Freelancer Front-end Developer with over 1 year of experience</h4>
+                <p data-aos="fade-left">I'm Freelancer Front-end Developer with over 1 year of experience. I'm frome Panama.I code and
                     create web elements for amazing people. I like work with new people. New people, new Experiences
                 </p>
-                <img src="./img/profile.png" alt="About Profile">
-                <div class="about-button">
+                <img src="./img/profile.png" alt="About Profile" data-aos="fade-right">
+                <div class="about-button" data-aos="fade-left">
                     <button class="btn-about">Download CV</button>
-                    <button class="btn-about">Contact Me</button>
+                    <button class="btn-about"> <a href="#contact">Contact Me</a></button>
                 </div>
             </div>
         </div>
 
 
         <div id="skill" class="skill" onclick="closeNav()">
-            <h1>Skills</h1>
+            <h1 data-aos="zoom-in">Skills</h1>
             <div class="skill-contain">
-                <div class="skill-bars">
+                <div class="skill-bars" data-aos="fade-up"
+                                        data-aos-duration="3000">
                     <i class="fa-brands fa-html5 html-logo"></i>
                     <p class="skill-tech">HTML (Intermediate)</p>
                     <div class="skill-bar-size skill-level-80"></div>
                 </div>
-                <div class="skill-bars">
+                <div class="skill-bars" data-aos="fade-up"
+                                        data-aos-duration="3000"">
                     <i class="fa-brands fa-css3-alt css-logo"></i>
                     <p class="skill-tech">CSS (Intermediate)</p>
                     <div class="skill-bar-size skill-level-60"></div>
                 </div>
-                <div class="skill-bars">
+                <div class="skill-bars" data-aos="fade-up"
+                                        data-aos-duration="3000">
                     <i class="fa-brands fa-js js-logo"></i> 
                     <p class="skill-tech">JavaScript (Basic)</p>
                     <div class="skill-bar-size skill-level-30"></div>
                 </div>
-                <div class="skill-bars">
+                <div class="skill-bars" data-aos="fade-up"
+                                        data-aos-duration="3000">
                     <i class="fa-brands fa-angular angular-logo"></i>
                     <p class="skill-tech">Angular (Basic)</p>
                     <div class="skill-bar-size skill-level-10"></div>
                 </div>
-                <div class="design-back design-back-2"></div>
-                <div class="design-back design-back-1"></div>
-                <div class="design-back design-back-3"></div>
-                <div class="design-back design-back-4"></div>
+                <div class="design-back design-back-2" data-aos="fade-down"
+                                                        data-aos-easing="linear"
+                                                        data-aos-duration="1500"></div>
+                <div class="design-back design-back-1" data-aos="fade-down"
+                                                        data-aos-easing="linear"
+                                                        data-aos-duration="1500"></div>
+                <div class="design-back design-back-3" data-aos="fade-down"
+                                                        data-aos-easing="linear"
+                                                        data-aos-duration="1500"></div>
+                <div class="design-back design-back-4" data-aos="fade-down"
+                                                        data-aos-easing="linear"
+                                                        data-aos-duration="1500"></div>
             </div>
         </div>
 
-        <div class="portfolio-container">
-            <h1>Portfolio</h1>
+        <div id="portfolio" class="portfolio-container" onclick="closeNav()">
+            <h1 data-aos="zoom-in">Portfolio</h1>
             <div class="portfolio-content">
                 <div class="portfolio">
-                    <div class="proj gif-app">
+                    <div class="proj gif-app" data-aos="flip-left"
+                                              data-aos-easing="ease-out-cubic"
+                                              data-aos-duration="2000">
                         <div class="code">
                             <h3>Gif App</h3>
                             <p>In this app I used GIPHY Developer API, you can search any gif here.</p>
@@ -198,7 +216,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="proj rest-country">
+                    <div class="proj rest-country" data-aos="flip-left"
+                                              data-aos-easing="ease-out-cubic"
+                                              data-aos-duration="2000">
                         <div class="code">
                             <h3>Rest Countries</h3>
                             <p>In this app I used REST Countries API, you can search any country here.</p>
@@ -208,7 +228,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="proj buycart">
+                    <div class="proj buycart" data-aos="flip-left"
+                                              data-aos-easing="ease-out-cubic"
+                                              data-aos-duration="2000">
                         <div class="code">
                             <h3>Buy Cart</h3>
                             <p>This web is a buy cart.</p>
@@ -218,7 +240,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="proj myport">
+                    <div class="proj myport" data-aos="flip-left"
+                                              data-aos-easing="ease-out-cubic"
+                                              data-aos-duration="2000">
                         <div class="code">
                             <div class="code-view">
                                 <a href="#" target="blank"><i class="fa-solid fa-eye"></i></a>
@@ -231,8 +255,9 @@
 
         </div>
 
-        <div class="form-container">
-            <div class="form">
+        <div id="contact" class="form-container" onclick="closeNav()">
+            <div class="form" data-aos="fade-up"
+                              data-aos-duration="3000">
                 <h1>Contact Me</h1>
                 <form method="POST">
                     <div class="group">
@@ -256,9 +281,9 @@
                       </button>
                 </form>
             </div>
-            <div class="design-back design-back-1"></div>
-            <div class="design-back design-back-2"></div>
-            <div class="design-back design-back-3"></div>
+            <div class="design-back design-back-1" data-aos="zoom-in"></div>
+            <div class="design-back design-back-2" data-aos="zoom-in"></div>
+            <div class="design-back design-back-3" data-aos="zoom-in"></div>
         </div>
 
     </div>
@@ -267,6 +292,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

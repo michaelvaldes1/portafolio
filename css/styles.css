@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -468,6 +473,9 @@ button {
     background: linear-gradient(180deg, rgba(246,247,249, .8) .1%, rgba(246,247,249, 1) 98%),
                  url(../img/mountains-mobile.jpg) no-repeat center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-attachment: fixed;
     transition: .4s ease all;
 
@@ -483,6 +491,9 @@ button {
     background: linear-gradient(180deg, rgba(0,0,0, .2) 1%, rgba(0,0,0, .3) 98%),
                  url(../img/mountains-mobile.jpg) no-repeat center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-attachment: fixed;
 
     display: flex;
@@ -542,6 +553,20 @@ a {
     animation: pulse512 1.5s infinite;
    }
    
+   @-webkit-keyframes pulse512 {
+    0% {
+     box-shadow: 0 0 0 0 #f7f518;
+    }
+   
+    70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+   }
+   
    @keyframes pulse512 {
     0% {
      box-shadow: 0 0 0 0 #f7f518;
@@ -564,12 +589,20 @@ a {
    /* ================================== A B O U T   M E ============ */
 
    .about {
-       margin: 0 10px 10px 10px;
+       transition: .4s ease all;
+       background: #fff;
+       margin: 0 10px;
+       padding: 60px 20px;
        transition: .4s ease all;
    }
 
+   .about h1 {
+        text-align: center;
+        padding-bottom: 10px;
+   }
+
    .about .about-content {
-       padding: 60px 20px 40px 20px;
+       padding: 20px;
        background-color: #fff;
        transition: .4s ease all;
 
@@ -674,7 +707,6 @@ a {
 }
 
 .skill-contain {
-    border-bottom: 1px solid rgb(236, 227, 227);  
     transition: .4s ease all;
 
     display: flex;
@@ -759,7 +791,8 @@ p.skill-tech {
     background: var(--blue-color);
     transition: all .4s ease;
     left: -300px;
-    animation: skill-bar-fill 2s ease-in-out forwards;
+    -webkit-animation: skill-bar-fill 2s ease-in-out forwards;
+            animation: skill-bar-fill 2s ease-in-out forwards;
 }
 
 .skill-bars .skill-level-10::after {
@@ -791,6 +824,12 @@ p.skill-tech {
 }
 .skill-bars .skill-level-90::after {
     --skill-bar-level: 90%
+}
+
+@-webkit-keyframes skill-bar-fill {
+    to {
+        transform: translateX(var(--skill-bar-level));
+    }
 }
 
 @keyframes skill-bar-fill {
@@ -1112,7 +1151,8 @@ button.sent {
    }
    
    button.sent:hover .svg-wrapper {
-    animation: fly-1 0.6s ease-in-out infinite alternate;
+    -webkit-animation: fly-1 0.6s ease-in-out infinite alternate;
+            animation: fly-1 0.6s ease-in-out infinite alternate;
    }
    
    button.sent:hover svg {
@@ -1125,6 +1165,16 @@ button.sent {
    
    button.sent:active {
     transform: scale(0.95);
+   }
+   
+   @-webkit-keyframes fly-1 {
+    from {
+     transform: translateY(0.1em);
+    }
+   
+    to {
+     transform: translateY(-0.1em);
+    }
    }
    
    @keyframes fly-1 {
@@ -1169,7 +1219,7 @@ button.sent {
 }
 
 
-
+/* ================================== D A R K  M O D E ============ */
 
 
 body .dark-mode .container-body {
@@ -1231,7 +1281,8 @@ body.dark-mode .skill-bars .skill-bar-size::after {
     background: var(--blue-color);
     transition: all .4s ease;
     left: -300px;
-    animation: skill-bar-fill 2s ease-in-out forwards;
+    -webkit-animation: skill-bar-fill 2s ease-in-out forwards;
+            animation: skill-bar-fill 2s ease-in-out forwards;
 }
 
 body.dark-mode .skill-bars .skill-level-10::after {
@@ -1285,12 +1336,17 @@ body.dark-mode .social-net i {
     color: var(--font-color);
 }
 
+body.dark-mode .about {
+    background: var(--bg-dark);
+    transition: .4s ease all;
+}
+
 body.dark-mode .about-content {
     background: var(--bg-dark);
     transition: .4s ease all;
 }
 
-body.dark-mode .about-content h1 {
+body.dark-mode .about h1 {
     color: #fff;
 }
 
@@ -1329,7 +1385,8 @@ body.dark-mode #skill .skill-contain {
 body.dark-mode #skill .skill-contain .skill-bars{
     background: rgba( 0, 0, 0, 0.8 );
     box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
-    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+            backdrop-filter: blur( 5px );
     transition: .4s ease all;
 }
 
@@ -1341,7 +1398,8 @@ body.dark-mode #skill .skill-contain p {
 body.dark-mode .form {
     background: rgba( 0, 0, 0, 0.8 );
     box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
-    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+            backdrop-filter: blur( 5px );
     transition: .4s ease all;
     color: #fff;
 }
@@ -1356,3 +1414,91 @@ body.dark-mode .content-nav-right {
     background: var(--bg-dark2);
     transition: .4s ease all;
 }
+
+
+/* ================================== M E D I A   Q U E R Y ============ */
+
+@media screen and (min-width: 768px) {
+    #skill .skill-contain {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #skill .skill-contain .design-back-3 {
+        top: 400px;
+    }
+
+    #skill .skill-contain .design-back-2 {
+        left: 30px;
+        top: 100px;
+    }
+
+    #skill .skill-contain .design-back-4 {
+        left: 40px;
+        top: 400px;
+    }
+
+    .portfolio-container .portfolio {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+    #skill .skill-contain .design-back-2 {
+        left: 80px;
+    }
+
+    #skill .design-back-1 {
+        top: 150px;
+        right: 100px;
+    }
+
+    #skill .skill-contain .design-back-4 {
+        left: 80px;
+        top: 400px;
+    }
+
+    .about .about-content {
+
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        grid-template-rows: 50px 70px 1fr;
+        gap: 10px;
+        grid-template-areas: "imagen titulo2"
+                             "imagen parrafo"
+                             "imagen parrafo"
+                             "imagen botones";
+    }
+
+    .about h1 {
+        align-self: center;
+        padding-bottom: 60px;
+    }
+
+    .about .about-content h4 {
+        grid-area: titulo2;
+    }
+    .about .about-content p {
+        grid-area: parrafo;
+    }
+    .about .about-content img {
+        width: 300px;
+        height: 300px;
+        grid-area: imagen;
+        justify-self: center;
+    }
+    .about .about-button {
+        grid-area: botones;
+        justify-self: center;
+    }
+
+    
+}
+
+
+
