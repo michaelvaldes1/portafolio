@@ -6,6 +6,12 @@ let dot = document.querySelector('.dot');
 let dot2 = document.querySelector('.dot-2');
 let btnX = document.querySelector('.btn-x');
 let dark = document.querySelector('.slider');
+let bi = document.querySelector('.bi');
+let barra = document.querySelector('.fa-solid');
+let navR = document.querySelector(".nav-right");
+let body = document.querySelector(".body");
+
+
 
 
 
@@ -36,6 +42,24 @@ function closeNav() {
 dark.addEventListener('click', () => {
     document.querySelector('body').classList.toggle('dark-mode');
 })
+
+// ======== FORM =============
+
+
+const $form = document.querySelector('#form');
+const $buttonMailto = document.querySelector('#trucazo');
+
+$form.addEventListener('submit', handleSubmit)
+
+function handleSubmit(event) {
+    event.preventDefault()
+    const form = new FormData(this)
+    $buttonMailto.setAttribute('href', `mailto:valdes.michael@hotmail.com?subject=${form.get('name')}&body=${form.get('message')}`)
+    $buttonMailto.click()
+}
+
+
+
 
 // ======== TYPING EFFECT =============
 
