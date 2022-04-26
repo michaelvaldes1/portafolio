@@ -1,0 +1,320 @@
+@media screen and (min-width: 768px) {
+    #skill .skill-contain {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #skill .skill-contain .design-back-3 {
+        top: 400px;
+    }
+
+    #skill .skill-contain .design-back-2 {
+        left: 30px;
+        top: 100px;
+    }
+
+    #skill .skill-contain .design-back-4 {
+        left: 40px;
+        top: 400px;
+    }
+
+    .portfolio-container .portfolio {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #skill .skill-contain .design-back-2 {
+        left: 80px;
+    }
+
+    #skill .design-back-1 {
+        top: 150px;
+        right: 100px;
+    }
+
+    #skill .skill-contain .design-back-4 {
+        left: 80px;
+        top: 400px;
+    }
+
+    .about .about-content {
+
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        grid-template-rows: 50px 70px 1fr;
+        gap: 10px;
+        grid-template-areas: "imagen titulo2"
+                             "imagen parrafo"
+                             "imagen parrafo"
+                             "imagen botones";
+    }
+
+    .about h1 {
+        align-self: center;
+        padding-bottom: 60px;
+    }
+
+    .about .about-content h4 {
+        grid-area: titulo2;
+    }
+    .about .about-content p {
+        grid-area: parrafo;
+    }
+    .about .about-content img {
+        width: 300px;
+        height: 300px;
+        grid-area: imagen;
+        justify-self: center;
+    }
+    .about .about-button {
+        grid-area: botones;
+        justify-self: center;
+    }
+
+    .form-container .design-back-1{
+        right: 200px;
+    }
+    .form-container .design-back-2{
+        width: 150px;
+        height: 150px;
+        left: 180px;
+    }
+    .form-container .design-back-3{
+        right: 300px;
+    }
+    .form-container .form {
+        width: 400px;
+    }
+    .form-container form .group input {
+        font-size: 24px;
+    }
+    .form-container form .group textarea {
+        width: 300px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .about .about-content {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    .form-container .design-back-1{
+        width: 150px;
+        height: 150px;
+        right: 200px;
+    }
+    .form-container .design-back-2{
+        width: 200px;
+        height: 200px;
+        left: 150px;
+    }
+    .form-container .design-back-3{
+        right: 300px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .todo {
+        margin-left: 300px;
+        margin-right: 70px;
+        background: var(--bg-color);
+    }
+
+    .profile i {
+        display: none;
+    }
+
+    .nav-right li {
+        display: none;
+        cursor: unset;
+    }
+
+    .nav-right .btn-nav-right button {
+        margin-left: 10px;
+    }
+
+    .nav-right-active {
+        right: 0 !important;
+    }
+
+    .nav-right-active li {
+        display: block;
+    }
+
+    .nav-right-active > body {
+        margin-right: 130px !important;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    body.dark-mode .todo {
+        background: var(--bg-dark2);
+    }
+
+    .nav-right {
+        right: -130px;
+    }
+
+    body.dark-mode .nav-right {
+        border-left: 1px solid var(--bg-dark);
+    }
+
+    .container-nav {
+        display: none;
+    }
+
+    .container-profile {
+        left: 0;
+    }
+
+    .poster {
+        height: 450px;
+        padding: 0;
+    }
+
+    .poster .poster-contain {
+        height: 360px;
+        margin: 35px 10px !important;
+    }
+
+    
+
+    .poster .poster-contain {
+        background: linear-gradient(90deg, rgba(33,35,41,0.25253851540616246) 50%, rgba(33,35,41,0.25253851540616246) 50%),
+        url(../img/mountains.jpg);
+        margin: 30px !important;
+    }
+
+    .about .about-content {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    i.bi-x {
+        display: none;
+    }
+
+    
+}
+
+@media screen and (min-width: 1400px) {
+    .poster {
+        position: relative;
+        background: linear-gradient(180deg, rgba(246,247,249, .8) .1%, rgba(246,247,249, 1) 98%),
+        url(../img/mountains-mobile.jpg) no-repeat center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        transition: .4s ease all;
+        height: 360px;
+    }
+
+    .poster .poster-contain {
+        background: linear-gradient(90deg, rgba(33,35,41,0.25253851540616246) 50%, rgba(33,35,41,0.25253851540616246) 50%),
+        url(../img/mountains.jpg);
+        margin: 30px !important;
+    }
+
+
+    .poster .poster-contain p {
+        padding-left: 100px;
+        text-align: start;
+    }
+
+    .about .about-content {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .btn-poster {
+        justify-content: start;
+        margin-left: 100px;
+    }
+
+    .poster .poster-contain img {
+        display: block;
+        width: 250px;
+        height: auto;
+        box-sizing: border-box;
+        right: 100px;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .portfolio-content .portfolio .proj {
+        width: 450px;
+    }
+    .portfolio-content .portfolio .code {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .about .about-content {
+        padding-left: 250px;
+        padding-right: 250px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 24px;
+    }
+
+    .content-info h4 {
+        font-size: 20px;
+    }
+
+}
+
+
+
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+   }
+   
+   /* The slider */
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFF;
+    transition: .4s;
+    border-radius: 30px;
+   }
+   
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 1.8em;
+    background: linear-gradient(40deg,#f7f518, #ffe031 70%);
+    ;
+    transition: .4s;
+   }

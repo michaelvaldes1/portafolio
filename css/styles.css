@@ -1406,8 +1406,8 @@ body.dark-mode .about-content h4 {
 
 body.dark-mode .poster,
 body.dark-mode {
-    background: linear-gradient(90deg, rgba(33,35,41,0.8491771708683473) 50%, rgba(33,35,41,0.8491771708683473) 50%),
-        url(../img/mountains.jpg);
+    background: linear-gradient(180deg, rgba(33,35,41,0.9136029411764706) 50%, rgba(33,35,41,.95) 50%),
+        url(../img/mountains.jpg) no-repeat;
 }
 
 body.dark-mode .skill h1 {
@@ -1569,35 +1569,95 @@ body.dark-mode footer {
     .form-container form .group textarea {
         width: 300px;
     }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+
+    .about {
+        padding: 60px 70px;
+    }
+
+    .about .about-content img {
+        width: 250px;
+        height: 250px;
+    }
+    .btn-about {
+        font-size: 12px;
+    }
+
+    .about .about-content {
+
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 50px 70px 1fr;
+        gap: 10px;
+        grid-template-areas: "imagen titulo2"
+                             "imagen parrafo"
+                             "imagen parrafo"
+                             "imagen botones";
+    }
+
+    .container-profile {
+        width: 270px;
+    }
+
+    .content-info h4 {
+        font-size: 12px;
+    }
+
+    .container-profile .social-net {
+        width: 270px;
+    }
+
     
 }
 
 @media screen and (min-width: 992px) {
-    .about .about-content {
-        padding-left: 70px;
-        padding-right: 70px;
+    .todo {
+        margin-left: 270px;
+        margin-right: 55px;
+        background: var(--bg-color);
     }
-    .form-container .design-back-1{
-        width: 150px;
-        height: 150px;
-        right: 200px;
+
+    .about {
+        padding: 60px 0;
     }
-    .form-container .design-back-2{
+
+    .about .about-content img {
         width: 200px;
         height: 200px;
-        left: 150px;
     }
-    .form-container .design-back-3{
-        right: 300px;
+
+    .about .about-content {
+        grid-template-columns: 200px 1fr;
     }
-}
 
-@media screen and (min-width: 1200px) {
+    #skill .skill-contain {
+        grid-template-columns: 1fr;
+    }
 
-    .todo {
-        margin-left: 300px;
-        margin-right: 70px;
-        background: var(--bg-color);
+    .portfolio-container .portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-content .portfolio .proj {
+        width: 400px;
+    }
+
+    i.im {
+        font-size: 18px;
     }
 
     .profile i {
@@ -1607,6 +1667,15 @@ body.dark-mode footer {
     .nav-right li {
         display: none;
         cursor: unset;
+    }
+
+    .nav-right {
+        width: 150px;
+        right: -95px;
+    }
+
+    .nav-right .content-nav-right {
+        width: 100%;
     }
 
     .nav-right .btn-nav-right button {
@@ -1633,10 +1702,6 @@ body.dark-mode footer {
         background: var(--bg-dark2);
     }
 
-    .nav-right {
-        right: -130px;
-    }
-
     body.dark-mode .nav-right {
         border-left: 1px solid var(--bg-dark);
     }
@@ -1650,14 +1715,18 @@ body.dark-mode footer {
     }
 
     .poster {
-        height: 450px;
+        height: 320px;
         padding: 0;
     }
 
+    .poster .poster-contain p .im {
+        font-size: 32px;
+    }
+
     .poster .poster-contain {
-        height: 400px;
-        margin-top: 25px !important;
-        margin: 25px;
+        height: 300px;
+        min-height: 300px;
+        margin: 10px !important;
     }
 
     
@@ -1677,10 +1746,42 @@ body.dark-mode footer {
         display: none;
     }
 
-    
+    .poster .poster-contain p {
+        font-size: 40px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 1em;
+        width: 1em;
+        border-radius: 20px;
+        left: 0.1em;
+        bottom: 1.7em;
+       }
+
+    .switch {
+        /* --moon-mask: ; */
+        font-size: 17px;
+        position: relative;
+        display: inline-block;
+        width: 1.3em;
+        height: 2.8em;
+        margin-left: 16px;
+    }
+
+    .nav-right .btn-nav-right button {
+        margin-left: 2px;
+    }
+
+    .btn-poster button {
+        font-size: 12px;
+    }
+
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
+
     .poster {
         position: relative;
         background: linear-gradient(180deg, rgba(246,247,249, .8) .1%, rgba(246,247,249, 1) 98%),
@@ -1691,11 +1792,13 @@ body.dark-mode footer {
         -o-background-size: cover;
         background-attachment: fixed;
         transition: .4s ease all;
+        height: 370px;
     }
 
     .poster .poster-contain {
         background: linear-gradient(90deg, rgba(33,35,41,0.25253851540616246) 50%, rgba(33,35,41,0.25253851540616246) 50%),
         url(../img/mountains.jpg);
+        margin: 35px !important;
     }
 
 
@@ -1705,8 +1808,13 @@ body.dark-mode footer {
     }
 
     .about .about-content {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 150px !important;
+        padding-right: 150px !important;
+        padding-top: 0;
+    }
+
+    .about h1 {
+        padding-bottom: 30px;
     }
 
     .btn-poster {
@@ -1716,7 +1824,7 @@ body.dark-mode footer {
 
     .poster .poster-contain img {
         display: block;
-        width: 250px;
+        width: 195px;
         height: auto;
         box-sizing: border-box;
         right: 100px;
@@ -1724,37 +1832,20 @@ body.dark-mode footer {
         position: absolute;
     }
 
+    #skill .skill-contain {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-container .portfolio {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .portfolio-content .portfolio .proj {
-        width: 450px;
+        width: 370px;
     }
+
     .portfolio-content .portfolio .code {
-        width: 450px;
-    }
-}
-
-@media screen and (min-width: 1700px) {
-    .about .about-content {
-        padding-left: 250px;
-        padding-right: 250px;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    p {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 24px;
-    }
-    h4 {
-        font-size: 24px;
-    }
-
-    .content-info h4 {
-        font-size: 20px;
+        width: 370px;
     }
 
 }
