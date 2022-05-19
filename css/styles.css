@@ -485,10 +485,10 @@ button {
     height: 100vh;
     background: linear-gradient(180deg, rgba(246,247,249, .8) .1%, rgba(246,247,249, 1) 98%),
                  url(../img/mountains-mobile.jpg) no-repeat center;
-    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
     background-attachment: fixed;
     transition: .4s ease all;
 
@@ -503,10 +503,10 @@ button {
     margin: 60px 10px 10px 10px;
     background: linear-gradient(180deg, rgba(0,0,0, .2) 1%, rgba(0,0,0, .3) 98%),
                  url(../img/mountains-mobile.jpg) no-repeat center;
-    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
     background-attachment: fixed;
 
     display: flex;
@@ -641,6 +641,9 @@ a {
    }
 
    .about .about-content .about-button {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
        padding: 20px 0;
    }
 
@@ -1561,6 +1564,11 @@ body.dark-mode .skill-bars .skill-level-90::after {
 
 body.dark-mode .skill-cards {
     background: var(--bg-dark2);
+}
+
+body.dark-mode .skill-cards .side-tech {
+    background: var(--bg-dark);
+    transition: .4s ease all;
 }
 
 
